@@ -1,0 +1,5 @@
+{
+  "include": ["src", "tests", "main.py"],
+  "extraPaths": ["src"],
+  "typeCheckingMode": "basic"
+}

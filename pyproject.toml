@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "melanoma-detection"
+version = "1.0.0"
+description = "Experimental skin lesion classification with OpenCV and Random Forest"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Bruno Lucio Silva Prado"}]
+dependencies = [
+    "joblib>=1.3,<2",
+    "matplotlib>=3.8,<4",
+    "numpy>=1.26,<3",
+    "opencv-python>=4.9,<5",
+    "pandas>=2.1,<3",
+    "scikit-image>=0.22,<1",
+    "scikit-learn>=1.4,<2",
+    "scipy>=1.11,<2",
+    "seaborn>=0.13,<1",
+    "tqdm>=4.66,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.6,<1"]
+
+[project.scripts]
+melanoma-detection = "melanoma_detection.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
