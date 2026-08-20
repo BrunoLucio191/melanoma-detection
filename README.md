@@ -41,8 +41,7 @@ HAM10000_organizado/
 └── nevus_melanocitico/
 ```
 
-Keep the original dataset license and citation. Do not commit the image folders;
-they are ignored by Git.
+The dataset files are stored locally and are not included in this repository.
 
 ## Usage
 
